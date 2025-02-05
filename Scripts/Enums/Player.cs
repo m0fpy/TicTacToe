@@ -1,4 +1,4 @@
-﻿namespace TicTacToe.Scripts.Enum
+﻿namespace TicTacToe.Scripts.Enums
 {
     public enum Player
     {
