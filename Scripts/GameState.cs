@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using TicTacToe.Scripts.Enums;
 
 namespace TicTacToe.Scripts
@@ -28,7 +29,7 @@ namespace TicTacToe.Scripts
 
         private bool CanMakeMove(int r, int c)
         {
-            return !GameOver && GameGrid[r, c] != Player.None;
+            return !GameOver && GameGrid[r, c] == Player.None;
         }
 
         private bool IsGridFull()
@@ -113,7 +114,7 @@ namespace TicTacToe.Scripts
             GameGrid[r, c] = CurrentPlayer;
             TurnsPassed++;
 
-            if(DidMoveEndGame(r, c, out GameResult gameResult))
+            if (DidMoveEndGame(r, c, out GameResult gameResult))
             {
                 GameOver = true;
                 MoveMade?.Invoke(r, c);

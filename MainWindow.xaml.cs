@@ -64,6 +64,8 @@ namespace TicTacToe
             GameCanvas.Visibility = Visibility.Visible;
         }
 
+        
+
         private void OnMoveMade(int r, int c)
         {
             Player player = gameState.GameGrid[r, c];
@@ -106,7 +108,6 @@ namespace TicTacToe
             int row = (int)(clickPosition.Y / squareSize);
             int col = (int)(clickPosition.X / squareSize);
             gameState.MakeMove(row, col);
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
